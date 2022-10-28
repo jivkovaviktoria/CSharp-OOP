@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassBoxData", "ClassBoxData\ClassBoxData.csproj", "{CCF2F15B-6DC7-4714-870F-90A610648088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassBoxData", "ClassBoxData\ClassBoxData.csproj", "{CCF2F15B-6DC7-4714-870F-90A610648088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalFarm", "AnimalFarm\AnimalFarm.csproj", "{0DB20514-3A84-413F-8418-212B0661FAE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CCF2F15B-6DC7-4714-870F-90A610648088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCF2F15B-6DC7-4714-870F-90A610648088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCF2F15B-6DC7-4714-870F-90A610648088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB20514-3A84-413F-8418-212B0661FAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB20514-3A84-413F-8418-212B0661FAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB20514-3A84-413F-8418-212B0661FAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB20514-3A84-413F-8418-212B0661FAE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
