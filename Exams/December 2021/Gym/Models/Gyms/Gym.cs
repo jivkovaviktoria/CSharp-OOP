@@ -17,6 +17,9 @@ namespace Gym.Models.Gyms
 
             this.Name = name;
             this.Capacity = capacity;
+
+            this.Equipment = new List<IEquipment>();
+            this.Athletes = new List<IAthlete>();
         }
         public string Name { get; }
 
@@ -70,7 +73,7 @@ namespace Gym.Models.Gyms
             else sb.AppendLine("No athletes");
 
             sb.AppendLine($"Equipment total count: {this.Equipment.Count}");
-            sb.Append($"Equipment total weight: {totalWeight} grams");
+            sb.Append($"Equipment total weight: {totalWeight:f2} grams");
 
             return sb.ToString().Trim();
         }
