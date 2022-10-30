@@ -25,9 +25,6 @@ namespace Gym.Models.Athletes
         public int Stamina { get; protected set; }
         public int NumberOfMedals { get; }
 
-        public virtual void Exercise()
-        {
-            this.Stamina++;
-        }
+        public abstract void Exercise();
     }
 }

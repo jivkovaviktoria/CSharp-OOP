@@ -7,22 +7,22 @@ using System.Text;
 
 namespace Gym.Repositories
 {
-    public abstract class EquipmentRepository<IEquipment> : IRepository<IEquipment>
+    public class EquipmentRepository : IRepository
     {
-        private List<IEquipment> items = new List<IEquipment>();
-        public IReadOnlyCollection<IEquipment> Models => this.items.AsReadOnly();
+        private List<Equipment> items = new List<Equipment>();
+        public IReadOnlyCollection<Equipment> Models => this.items.AsReadOnly();
 
-        public void Add(IEquipment model)
+        public void Add(Equipment model)
         {
             this.items.Add(model);
         }
 
-        public IEquipment FindByType(string type)
+        public Equipment FindByType(string type)
         {
             return this.items.FirstOrDefault(x => x.GetType().Name == type);
         }
 
-        public bool Remove(IEquipment model)
+        public bool Remove(Equipment model)
         {
             if(this.items.Contains(model))
             {
