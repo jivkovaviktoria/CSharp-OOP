@@ -20,6 +20,9 @@ namespace Gym.Models.Gyms
 
             this.Name = name;
             this.Capacity = capacity;
+
+            this.Equipment = new List<IEquipment>();
+            this.Athletes = new List<IAthlete>();
         }
         public string Name { get; }
 

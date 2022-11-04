@@ -18,7 +18,7 @@
                 this.Stamina = 100;
                 throw new ArgumentException(ExceptionMessages.InvalidStamina);
             }
-            
+
             this.Stamina += 15;
         }
     }
