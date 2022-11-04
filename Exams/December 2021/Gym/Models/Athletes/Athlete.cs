@@ -8,7 +8,7 @@ namespace Gym.Models.Athletes
 {
     public abstract class Athlete : IAthlete
     {
-        protected Athlete(string fullName, string motivation, int stamina, int numberOfMedals)
+        protected Athlete(string fullName, string motivation, int numberOfMedals, int stamina)
         {
             if (string.IsNullOrEmpty(fullName)) throw new ArgumentException(ExceptionMessages.InvalidAthleteName);
             if (string.IsNullOrEmpty(motivation)) throw new ArgumentException(ExceptionMessages.InvalidAthleteMotivation);
@@ -16,8 +16,8 @@ namespace Gym.Models.Athletes
 
             this.FullName = fullName;
             this.Motivation = motivation;
-            this.Stamina = stamina;
             this.NumberOfMedals = numberOfMedals;
+            this.Stamina = stamina;
         }
 
         public string FullName { get; }

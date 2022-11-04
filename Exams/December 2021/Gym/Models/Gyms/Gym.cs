@@ -11,7 +11,10 @@ namespace Gym.Models.Gyms
 {
     public abstract class Gym : IGym
     {
-        public Gym(string name, int capacity)
+        private readonly List<IEquipment> equipments = new List<IEquipment>();
+        private readonly List<IAthlete> athletes = new List<IAthlete>();
+
+        protected Gym(string name, int capacity)
         {
             if (string.IsNullOrEmpty(name)) throw new ArgumentException(ExceptionMessages.InvalidGymName);
 
@@ -33,9 +36,9 @@ namespace Gym.Models.Gyms
             return total;
         }
 
-        public ICollection<IEquipment> Equipment { get; }
+        public ICollection<IEquipment> Equipment => this.equipments;
 
-        public ICollection<IAthlete> Athletes { get; }
+        public ICollection<IAthlete> Athletes => this.athletes;
 
         public void AddAthlete(IAthlete athlete)
         {
@@ -58,10 +61,6 @@ namespace Gym.Models.Gyms
 
         public string GymInfo()
         {
-            double totalWeight = 0;
-            foreach (var x in this.Equipment) totalWeight += x.Weight;
-            
-
             var sb = new StringBuilder();
             sb.AppendLine($"{this.Name} is a {this.GetType().Name}:");
             sb.Append("Athletes: ");
@@ -70,18 +69,14 @@ namespace Gym.Models.Gyms
             else sb.AppendLine("No athletes");
 
             sb.AppendLine($"Equipment total count: {this.Equipment.Count}");
-            sb.Append($"Equipment total weight: {totalWeight} grams");
+            sb.Append($"Equipment total weight: {this.EquipmentWeight} grams");
 
             return sb.ToString().Trim();
         }
 
         public bool RemoveAthlete(IAthlete athlete)
         {
-            var target = this.Athletes.FirstOrDefault(x => x.FullName == athlete.FullName);
-            if (target == null) return false;
-
-            this.Athletes.Remove(target);
-            return true;
+            return this.Athletes.Remove(athlete);
         }
     }
 }

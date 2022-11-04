@@ -1,36 +1,28 @@
-﻿using Gym.Models.Equipment;
-using Gym.Repositories.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Gym.Repositories
+﻿namespace Gym.Repositories
 {
-    public class EquipmentRepository : IRepository
+    using System.Collections.Generic;
+    using System.Linq;
+    using Gym.Models.Equipment.Contracts;
+    using Gym.Repositories.Contracts;
+
+    public class EquipmentRepository : IRepository<IEquipment>
     {
-        private List<Equipment> items = new List<Equipment>();
-        public IReadOnlyCollection<Equipment> Models => this.items.AsReadOnly();
+        private readonly List<IEquipment> models = new List<IEquipment>();
+        public IReadOnlyCollection<IEquipment> Models => this.models.AsReadOnly();
 
-        public void Add(Equipment model)
+        public void Add(IEquipment model)
         {
-            this.items.Add(model);
+            this.models.Add(model);
         }
 
-        public Equipment FindByType(string type)
+        public IEquipment FindByType(string type)
         {
-            return this.items.FirstOrDefault(x => x.GetType().Name == type);
+            return this.models.FirstOrDefault(x => x.GetType().Name == type);
         }
 
-        public bool Remove(Equipment model)
+        public bool Remove(IEquipment model)
         {
-            if(this.items.Contains(model))
-            {
-                this.items.Remove(model);
-                return true;
-            }
-
-            return false;
+            return this.models.Remove(model);
         }
     }
 }

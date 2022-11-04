@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Gym.Utilities.Messages;
-
-namespace Gym.Models.Athletes
+﻿namespace Gym.Models.Athletes
 {
+    using System;
+    using Gym.Utilities.Messages;
+
     public class Boxer : Athlete
     {
-        public Boxer(string fullName, string motivation, int numberOfMedals) : base(fullName, motivation, 60, numberOfMedals)
+        private const int InitialStamina = 60;
+        
+        public Boxer(string fullName, string motivation, int numberOfMedals) : base(fullName, motivation, numberOfMedals, InitialStamina)
         {
         }
 
         public override void Exercise()
         {
-            if (this.Stamina + 15 > 100) throw new ArgumentException(ExceptionMessages.InvalidStamina);
+            if (this.Stamina + 15 > 100)
+            {
+                this.Stamina = 100;
+                throw new ArgumentException(ExceptionMessages.InvalidStamina);
+            }
+            
             this.Stamina += 15;
         }
     }
