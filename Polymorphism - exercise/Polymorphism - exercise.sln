@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicles", "Vehicles\Vehicles.csproj", "{B6D17C65-C1FE-4A5D-B780-C64780D41D6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehiclesExtension", "VehiclesExtension\VehiclesExtension.csproj", "{411E668C-51C1-44B4-934D-FAFEFB098EF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{B6D17C65-C1FE-4A5D-B780-C64780D41D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6D17C65-C1FE-4A5D-B780-C64780D41D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6D17C65-C1FE-4A5D-B780-C64780D41D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{411E668C-51C1-44B4-934D-FAFEFB098EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{411E668C-51C1-44B4-934D-FAFEFB098EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{411E668C-51C1-44B4-934D-FAFEFB098EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{411E668C-51C1-44B4-934D-FAFEFB098EF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
