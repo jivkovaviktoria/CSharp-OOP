@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathOperations", "MathOperations\MathOperations.csproj", "{D7AB7503-91F7-4514-AC88-8A9316359E16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "Animals\Animals.csproj", "{59E7FB12-919E-4725-8BB7-B7DEAFC988C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{D7AB7503-91F7-4514-AC88-8A9316359E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7AB7503-91F7-4514-AC88-8A9316359E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7AB7503-91F7-4514-AC88-8A9316359E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E7FB12-919E-4725-8BB7-B7DEAFC988C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E7FB12-919E-4725-8BB7-B7DEAFC988C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E7FB12-919E-4725-8BB7-B7DEAFC988C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E7FB12-919E-4725-8BB7-B7DEAFC988C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
