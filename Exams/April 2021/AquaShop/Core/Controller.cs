@@ -48,7 +48,7 @@ namespace AquaShop.Core
                     decorationType));
             
             var aquarium = this.aquariums.Find(x => x.Name == aquariumName);
-            aquarium.Decorations.Add(decoration);
+            aquarium.AddDecoration(decoration);
             decorations.Remove(decoration);
 
             return string.Format(OutputMessages.EntityAddedToAquarium, decorationType, aquariumName);
@@ -65,12 +65,12 @@ namespace AquaShop.Core
 
             if (fishType == nameof(FreshwaterFish) && aquarium.GetType().Name == nameof(FreshwaterAquarium))
             {
-                aquarium.Fish.Add(fish);
+                aquarium.AddFish(fish);
                 return string.Format(OutputMessages.EntityAddedToAquarium, fishType, aquariumName);
             }
             else if(fishType == nameof(SaltwaterFish) && aquarium.GetType().Name == nameof(SaltwaterAquarium))
             {
-                aquarium.Fish.Add(fish);
+                aquarium.AddFish(fish);
                 return string.Format(OutputMessages.EntityAddedToAquarium, fishType, aquariumName);
             }
             

@@ -3,7 +3,7 @@
     public class FreshwaterFish : Fish
     {
         //can only live in freshwater aquarium
-        public FreshwaterFish(string name, string species, decimal price) : base(name, species, 5, price)
+        public FreshwaterFish(string name, string species, decimal price) : base(name, species, 3, price)
         {
         }
 
