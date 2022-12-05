@@ -13,12 +13,9 @@ namespace Easter.Models.Workshops
             {
                 var dye = bunny.Dyes.FirstOrDefault(x => x.IsFinished() == false);
 
-                if (dye != null)
-                {
-                    dye.Use();
-                    egg.GetColored();
-                    bunny.Work();   
-                }
+                dye.Use();
+                egg.GetColored();
+                bunny.Work();
             }
         }
     }

@@ -5,7 +5,6 @@
         public SleepyBunny(string name) : base(name, 50)
         {
         }
-
-        public override void Work() => this.Energy -= 5;
+        public override void Work() => this.Energy -= 15;
     }
 }

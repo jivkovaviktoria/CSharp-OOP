@@ -9,7 +9,7 @@ namespace Easter.Models.Dyes
 
         public Dye(int power)
         {
-            this.power = power;
+            this.Power = power;
         }
         public int Power
         {

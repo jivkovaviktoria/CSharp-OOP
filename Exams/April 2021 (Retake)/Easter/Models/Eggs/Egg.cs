@@ -7,11 +7,15 @@ namespace Easter.Models.Eggs
     public class Egg : IEgg
     {
         private int energyRequired;
+
         public Egg(string name, int energyRequired)
         {
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException(ExceptionMessages.InvalidEggName);
-            this.energyRequired = energyRequired;
+
+            this.Name = name;
+            this.EnergyRequired = energyRequired;
         }
+
         public string Name { get; }
 
         public int EnergyRequired

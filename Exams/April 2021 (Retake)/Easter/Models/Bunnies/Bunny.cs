@@ -12,7 +12,9 @@ namespace Easter.Models.Bunnies
         
         protected Bunny(string name, int energy)
         {
-            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException(ExceptionMessages.InvalidBunnyName);
+            if (string.IsNullOrEmpty(name)) throw new ArgumentException(ExceptionMessages.InvalidBunnyName);
+
+            this.Name = name;
             this.energy = energy;
             this.Dyes = new List<IDye>();
         }
