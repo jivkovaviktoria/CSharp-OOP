@@ -23,7 +23,18 @@ namespace BookingApp.Models.Hotels
         }
         public string FullName { get; }
         public int Category { get; }
-        public double Turnover => this.Bookings.All().Sum(x => x.ResidenceDuration * x.Room.PricePerNight);
+
+        public double Turnover
+        {
+            get
+            {
+                double x = 0;
+                foreach (var b in this.Bookings.All())
+                    x += b.ResidenceDuration * b.Room.PricePerNight;
+
+                return x;
+            }
+        }
         public IRepository<IRoom> Rooms { get; }
         public IRepository<IBooking> Bookings { get; }
     }

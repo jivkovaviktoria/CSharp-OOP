@@ -37,7 +37,7 @@ namespace BookingApp.Models.Bookings
             sb.AppendLine($"Adults: {this.AdultsCount} Children: {this.ChildrenCount}");
             sb.AppendLine($"Total amount paid: {totalPaid:f2} $");
 
-            return sb.ToString().TrimEnd();
+            return sb.ToString();
         }
     }
 }

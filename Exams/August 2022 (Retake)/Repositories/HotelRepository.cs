@@ -10,7 +10,7 @@ namespace BookingApp.Repositories
         private readonly List<IHotel> models = new List<IHotel>();
         public IReadOnlyCollection<IHotel> Models => this.models.AsReadOnly();
 
-        public void AddNew(IHotel model) => this.models.AsReadOnly();
+        public void AddNew(IHotel model) => this.models.Add(model);
 
         public IHotel Select(string criteria) => this.models.FirstOrDefault(x => x.FullName == criteria);
 
