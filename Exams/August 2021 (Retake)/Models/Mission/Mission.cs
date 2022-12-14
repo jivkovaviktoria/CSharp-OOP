@@ -10,15 +10,14 @@ namespace SpaceStation.Models.Mission
     {
         public void Explore(IPlanet planet, ICollection<IAstronaut> astronauts)
         {
-            foreach (var x in astronauts)
+            foreach (IAstronaut astronaut in astronauts)
             {
-                while (x.CanBreath)
+                while (astronaut.CanBreath && planet.Items.Any())
                 {
-                    var item = planet.Items.Last();
-                    x.Breath();
-                    
+                    string item = planet.Items.First();
+                    astronaut.Bag.Items.Add(item);
                     planet.Items.Remove(item);
-                    x.Bag.Items.Add(item);
+                    astronaut.Breath();
                 }
             }
         }

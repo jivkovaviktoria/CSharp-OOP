@@ -7,14 +7,16 @@ namespace SpaceStation.Models.Planets
 {
     public class Planet : IPlanet
     {
+        private List<string> items;
         public Planet(string name)
         {
-            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException(ExceptionMessages.InvalidPlanetName);
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException(ExceptionMessages.InvalidPlanetName);
 
             this.Name = name;
-            this.Items = new List<string>();
+            this.items = new List<string>();
         }
-        public ICollection<string> Items { get; }
+
+        public ICollection<string> Items => this.items;
         public string Name { get; }
     }
 }

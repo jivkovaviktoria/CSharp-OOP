@@ -9,7 +9,7 @@
         public override void Breath()
         {
             if ((this.Oxygen - 5) < 0) this.Oxygen = 0;
-            this.Oxygen -= 5;
+            else this.Oxygen -= 5;
         }
     }
 }

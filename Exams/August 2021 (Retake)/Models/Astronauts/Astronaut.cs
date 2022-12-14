@@ -1,5 +1,6 @@
 ﻿using System;
 using SpaceStation.Models.Astronauts.Contracts;
+using SpaceStation.Models.Bags;
 using SpaceStation.Models.Bags.Contracts;
 using SpaceStation.Utilities.Messages;
 
@@ -11,10 +12,11 @@ namespace SpaceStation.Models.Astronauts
         
         protected Astronaut(string name, double oxygen)
         {
-            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException(ExceptionMessages.InvalidAstronautName);
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException(ExceptionMessages.InvalidAstronautName);
 
             this.Name = name;
             this.oxygen = oxygen;
+            this.Bag = new Backpack();
         }
         
         public string Name { get; }
@@ -35,7 +37,7 @@ namespace SpaceStation.Models.Astronauts
         public virtual void Breath()
         {
             if ((this.Oxygen - 10) < 0) this.Oxygen = 0;
-            this.Oxygen -= 10;
+            else this.Oxygen -= 10;
         }
     }
 }
